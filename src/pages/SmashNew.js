@@ -7,7 +7,7 @@ class SmashNew extends Component {
   render() {
     return (
       <>
-      <p>SmashNew</p>
+        <p>Smash New</p>
       </>
     )
   }

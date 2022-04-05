@@ -7,7 +7,7 @@ class SmashEdit extends Component {
   render() {
     return (
       <>
-      <p>SmashEdit</p>
+        <p>Smash Edit</p>
       </>
     )
   }

@@ -1,38 +1,29 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Rubik+Mono+One&display=swap');
+
+.header {
+  max-width: 1200%;
+  height: 100px;
+  margin: auto;
+  font-size: 50px;
   text-align: center;
+  background-color: #65c1eb;
+  font-family: 'Rubik Mono One', sans-serif;
+  /* font-family: 'Black Ops One', cursive; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.footer {
+  max-width: 1200%;
+  height: 18px;
+  margin: auto;
+  font-size: 12px;
+  text-align: left;
+  background-color: #E4000F;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.notfound {
+  font-family: 'Roboto';
+  margin: auto;
+  font-size: 50px;
+  text-align: center;
 }

@@ -7,7 +7,7 @@ class SmashIndex extends Component {
   render() {
     return (
       <>
-      <p>SmashIndex</p>
+        <p>Smash Index</p>
       </>
     )
   }

@@ -8,7 +8,7 @@ class Footer extends Component {
   render() {
     return (
       <>
-      <p>FOOTER</p>
+        <div class="footer"><p>FOOTER © 2022 | Smash Bros Tinder Application Created by Jose & Kendra | LEARN Academy </p></div>
       </>
     )
   }
