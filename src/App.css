@@ -2,28 +2,29 @@
 
 .header {
   max-width: 1200%;
-  height: 100px;
+  height: 170px;
   margin: auto;
+  text-align: center;
   font-size: 50px;
   text-align: center;
   background-color: #65c1eb;
   font-family: 'Rubik Mono One', sans-serif;
-  /* font-family: 'Black Ops One', cursive; */
+}
+
+.notfound {
+  font-family: 'Rubik Mono One', sans-serif;
+  margin: auto;
+  font-size: 50px;
+  text-align: center;
+  height: 500px;
 }
 
 .footer {
   max-width: 1200%;
-  height: 18px;
+  height: 40px;
   margin: auto;
-  font-size: 12px;
+  font-size: 18px;
   text-align: left;
-  background-color: #E4000F;
-}
-
-
-.notfound {
-  font-family: 'Roboto';
-  margin: auto;
-  font-size: 50px;
-  text-align: center;
+  background-color: #d4444d;
+  font-family: 'Black Ops One', sans-serif;
 }
