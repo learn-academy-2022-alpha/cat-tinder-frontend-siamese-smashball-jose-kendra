@@ -6,10 +6,10 @@ As a developer, I can create a directory in src called assets.
 As a developer, I can create a file called Header.js in the components directory.
 As a developer, I can create a file called Footer.js in the components directory.
 As a developer, I can create a file called Home.js in the pages directory.
-As a developer, I can create a file called CatIndex.js in the pages directory.
-As a developer, I can create a file called CatShow.js in the pages directory.
-As a developer, I can create a file called CatNew.js in the pages directory.
-As a developer, I can create a file called CatEdit.js in the pages directory.
+As a developer, I can create a file called SmashIndex.js in the pages directory.
+As a developer, I can create a file called SmashShow.js in the pages directory.
+As a developer, I can create a file called SmashNew.js in the pages directory.
+As a developer, I can create a file called SmashEdit.js in the pages directory.
 As a developer, I can create a file called NotFound.js in the pages directory.
 As a developer, I can add a file to src called mockCats.js and add an array of cat objects.
 As a developer, I can add Reactstrap to my application.
