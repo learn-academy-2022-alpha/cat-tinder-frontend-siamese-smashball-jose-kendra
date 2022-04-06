@@ -8,25 +8,29 @@ import Enzyme, { shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
 // Imports in the component we are going to be testing.
-import App from './App.js'
+import NotFound from './NotFound.js'
+import questionbox from '../img/questionbox.png'
 
 //Allows us to utilize the adapter we import in earlier, allowing us to call and render a component.
 Enzyme.configure({ adapter: new Adapter() })
 
 
-describe("When App renders", () => {
-  let app
+describe("When NotFound renders", () => {
+  let notFound
   beforeEach(() => {
-    app = shallow(<App />)
+    notFound = shallow(<NotFound />)
   })
 
-  it("displays a header", () => {
-    const renderedHeader = app.find("Header")
-    expect(renderedHeader.length).toEqual(1)
+  it("displays text", () => {
+    const paragraph = notFound.find('p')
+    expect(paragraph.text()).toEqual("Page Not Found")
   })
 
-  it("displays a footer", () => {
-    const renderedFooter = app.find("Footer")
-    expect(renderedFooter.length).toEqual(1)
+  it("checks all props for img", () => {
+    const img = notFound.find('img')
+    expect(img.prop('src')).toEqual(questionbox)
+    expect(img.prop('alt')).toEqual('notfound')
+    expect(img.prop('id')).toEqual('box')
+
   })
 })

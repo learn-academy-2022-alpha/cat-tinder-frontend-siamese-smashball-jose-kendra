@@ -8,25 +8,18 @@ import Enzyme, { shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
 // Imports in the component we are going to be testing.
-import App from './App.js'
+import Header from './Header.js'
 
 //Allows us to utilize the adapter we import in earlier, allowing us to call and render a component.
 Enzyme.configure({ adapter: new Adapter() })
 
-
 describe("When App renders", () => {
-  let app
+  let header
   beforeEach(() => {
-    app = shallow(<App />)
+    header = shallow(<Header />)
   })
-
-  it("displays a header", () => {
-    const renderedHeader = app.find("Header")
-    expect(renderedHeader.length).toEqual(1)
-  })
-
-  it("displays a footer", () => {
-    const renderedFooter = app.find("Footer")
-    expect(renderedFooter.length).toEqual(1)
+  it("checks for a header image", () => {
+    const images = header.find('img')
+    expect(images.length).toEqual(5)
   })
 })

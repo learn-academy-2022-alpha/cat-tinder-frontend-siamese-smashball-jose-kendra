@@ -8,25 +8,21 @@ import Enzyme, { shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
 // Imports in the component we are going to be testing.
-import App from './App.js'
+import Home from './Home.js'
 
 //Allows us to utilize the adapter we import in earlier, allowing us to call and render a component.
 Enzyme.configure({ adapter: new Adapter() })
 
 
-describe("When App renders", () => {
-  let app
+describe("When Home renders", () => {
+  let home
   beforeEach(() => {
-    app = shallow(<App />)
+    home = shallow(<Home />)
   })
 
-  it("displays a header", () => {
-    const renderedHeader = app.find("Header")
-    expect(renderedHeader.length).toEqual(1)
+  it("displays some text", () => {
+    const paragraphs = home.find("p")
+    expect(paragraphs.length).toEqual(2)
   })
 
-  it("displays a footer", () => {
-    const renderedFooter = app.find("Footer")
-    expect(renderedFooter.length).toEqual(1)
-  })
 })
