@@ -3,6 +3,7 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header'
 import Footer from './components/Footer'
+// import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import SmashIndex from './pages/SmashIndex'
 import SmashShow from './pages/SmashShow'
@@ -28,8 +29,6 @@ class App extends Component {
     return (
       <>
         <Header />
-        <p>Super Smash Tinder App</p>
-        <Button color="danger">SMASH button!!</Button>
         <p>{this.state.characters.map(characters => `${characters.name} `)}<br /></p>
         <Router>
           <Switch>

@@ -7,7 +7,9 @@ class Home extends Component {
   render() {
     return (
       <>
+        <p class="supersmash">Super Smash Tinder App</p>
         <p>Home</p>
+        <img id="homeimage" src="" />
       </>
     )
   }
