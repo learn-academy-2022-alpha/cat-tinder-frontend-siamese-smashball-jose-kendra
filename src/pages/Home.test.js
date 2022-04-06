@@ -15,14 +15,14 @@ Enzyme.configure({ adapter: new Adapter() })
 
 
 describe("When Home renders", () => {
-    let home
-    beforeEach(() => {
-        home = shallow(<Home />)
-    })
+  let home
+  beforeEach(() => {
+    home = shallow(<Home />)
+  })
 
-    it("displays the homepage content", () => {
-        const renderedHome = home.find("p")
-        expect(renderedHome.length).toEqual(2)
+  it("displays some text", () => {
+    const paragraphs = home.find("p")
+    expect(paragraphs.length).toEqual(2)
+  })
 
-    })
 })

@@ -26,7 +26,6 @@ describe("When App renders", () => {
   })
 
   it("displays a footer", () => {
-    const renderApp = shallow(<App />)
     const renderedFooter = app.find("Footer")
     expect(renderedFooter.length).toEqual(1)
   })

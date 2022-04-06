@@ -11,7 +11,10 @@ class NotFound extends Component {
     return (
       <>
         <div class="notfound"><p>Page Not Found</p>
-          <div><img src={questionbox} id="box" alt="notfound" height="350px" width="450px" /></div></div>
+          <div>
+            <img src={questionbox} id="box" alt="notfound" height="350px" width="450px" />
+          </div>
+        </div>
       </>
     )
   }

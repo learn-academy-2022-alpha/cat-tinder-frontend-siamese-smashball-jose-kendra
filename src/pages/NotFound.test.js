@@ -11,27 +11,26 @@ import Adapter from 'enzyme-adapter-react-16'
 import NotFound from './NotFound.js'
 import questionbox from '../img/questionbox.png'
 
-
 //Allows us to utilize the adapter we import in earlier, allowing us to call and render a component.
 Enzyme.configure({ adapter: new Adapter() })
 
 
 describe("When NotFound renders", () => {
-    let notFound
-    beforeEach(() => {
-        notFound = shallow(<NotFound />)
-    })
+  let notFound
+  beforeEach(() => {
+    notFound = shallow(<NotFound />)
+  })
 
-    it("displays a heading ", () => {
-        const heading = notFound.find('p')
-        expect(heading.text()).toEqual("Page Not Found")
-    })
+  it("displays text", () => {
+    const paragraph = notFound.find('p')
+    expect(paragraph.text()).toEqual("Page Not Found")
+  })
 
-    it("checks all props for img", () => {
-        const img = notFound.find('img')
-        expect(img.prop('src')).toEqual(questionbox)
-        expect(img.prop('alt')).toEqual('notfound')
-        expect(img.prop('id')).toEqual('box')
+  it("checks all props for img", () => {
+    const img = notFound.find('img')
+    expect(img.prop('src')).toEqual(questionbox)
+    expect(img.prop('alt')).toEqual('notfound')
+    expect(img.prop('id')).toEqual('box')
 
-    })
+  })
 })
