@@ -28,16 +28,21 @@ class Header extends Component {
     })
   }
 
-
   render() {
     return (
       <>
         <div class="header">
-          <div className="header1">h</div>
-          <div class="bomblogo"><img src={bomb} /></div>
-          <div class="bomblogo2"><img src={bomb} /></div>
-          <div class="smashlogo"><img src={smashlogo} height="auto" width="auto" />
-            <div class="star"><img src={star} /></div>
+          <div class="bomblogo">
+            <img src={bomb} />
+          </div>
+          <div class="bomblogo2">
+            <img src={bomb} />
+          </div>
+          <div class="smashlogo">
+            <img src={smashlogo} height="auto" width="auto" />
+            <div class="star">
+              <img src={star} />
+            </div>
           </div>
         </div>
         {/*================= NAVBAR START =================*/}

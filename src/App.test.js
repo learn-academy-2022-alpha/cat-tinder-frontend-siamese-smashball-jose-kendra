@@ -25,11 +25,6 @@ describe("When App renders", () => {
     expect(renderedHeader.length).toEqual(1)
   })
 
-  it("checks for class tag on header", () => {
-    const header = app.find('.header1')
-    expect(header.text()).toEqual('h')
-  })
-
   it("displays a footer", () => {
     const renderApp = shallow(<App />)
     const renderedFooter = app.find("Footer")
