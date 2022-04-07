@@ -36,13 +36,17 @@ class SmashNew extends Component {
             <Label for="name">Name</Label>
             <Input
               type="text"
+              placeholder="Enter character name"
               name="name"
+              onChange={this.handleChange}
+              value={this.state.newCharacter.name}
             />
           </FormGroup>
           <FormGroup>
             <Label for="name">Age</Label>
             <Input
               type="text"
+              placeholder="Enter character age"
               name="age"
             />
           </FormGroup>
@@ -50,6 +54,7 @@ class SmashNew extends Component {
             <Label for="name">Enjoys</Label>
             <Input
               type="text"
+              placeholder="Enter character enjoyment"
               name="enjoys"
             />
           </FormGroup>
@@ -57,6 +62,7 @@ class SmashNew extends Component {
             <Label for="name">Image</Label>
             <Input
               type="text"
+              placeholder="Enter character image"
               name="image"
             />
           </FormGroup>
