@@ -2,6 +2,10 @@
 
 
 /*======================= HEADER BEGIN ======================= */
+h1 {
+  text-align: center;
+}
+
 .header {
   max-width: 1200%;
   height: 270px;
