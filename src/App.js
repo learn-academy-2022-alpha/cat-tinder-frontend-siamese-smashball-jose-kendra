@@ -3,18 +3,14 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header'
 import Footer from './components/Footer'
-// import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import SmashIndex from './pages/SmashIndex'
 import SmashShow from './pages/SmashShow'
 import SmashNew from './pages/SmashNew'
 import SmashEdit from './pages/SmashEdit'
 import NotFound from './pages/NotFound'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import smashCharacters from './smashCharacters'
-import './App.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button } from 'reactstrap';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 
 class App extends Component {
