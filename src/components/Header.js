@@ -3,7 +3,6 @@ import bomb from '../img/bomb.png'
 import star from '../img/star.png'
 import mush from '../img/mush.webp'
 import smashlogo from '../img/smashlogo.png'
-
 import {
   Collapse,
   Navbar,
@@ -48,7 +47,11 @@ class Header extends Component {
         {/*================= NAVBAR START =================*/}
         <div>
           <Navbar light expand="md">
-            <NavbarBrand><div class="navbarlogo"><img src={mush} height="50px" href="/" /></div></NavbarBrand>
+            <NavbarBrand>
+              <div class="navbarlogo">
+                <img src={mush} height="50px" href="/" />
+              </div>
+            </NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
@@ -56,13 +59,13 @@ class Header extends Component {
                   <NavLink href="/" active>Home</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/components/" active>Index</NavLink>
+                  <NavLink href="/" active>Index</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/components/" active>Show</NavLink>
+                  <NavLink href="/" active>Blank</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/components/" active>New</NavLink>
+                  <NavLink href="/" active>Blank</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink href="/components/" active>Edit</NavLink>

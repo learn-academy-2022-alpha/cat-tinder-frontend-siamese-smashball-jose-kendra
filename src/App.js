@@ -29,12 +29,15 @@ class App extends Component {
     return (
       <>
         <Header />
-        <p>{this.state.characters.map(characters => `${characters.name} `)}<br /></p>
         <Router>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/SmashIndex" component={SmashIndex} />
-            <Route path="/SmashShow" component={SmashShow} />
+            <Route path="/SmashIndex" render={(props) => <SmashIndex characters={this.state.characters} />} />
+            <Route path="/SmashShow/:id" render={(props) => {
+              let id = props.match.params.id
+              let character = this.state.characters.find(character => character.id === +id)
+              return <SmashShow character={character} />
+            }} />
             <Route path="/SmashNew" component={SmashNew} />
             <Route path="/SmashEdit" component={SmashEdit} />
             <Route component={NotFound} />
