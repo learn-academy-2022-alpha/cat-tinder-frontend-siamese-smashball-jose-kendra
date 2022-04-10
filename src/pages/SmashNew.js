@@ -6,6 +6,7 @@ import {
   Label,
   Button
 } from 'reactstrap'
+import { Redirect } from 'react-router-dom'
 
 
 class SmashNew extends Component {
@@ -17,7 +18,8 @@ class SmashNew extends Component {
         age: "",
         enjoys: "",
         image: ""
-      }
+      },
+      submitted: false
     }
   }
 
@@ -25,6 +27,11 @@ class SmashNew extends Component {
     let { newCharacter } = this.state
     newCharacter[e.target.name] = e.target.value
     this.setState({ newCharacter: newCharacter })
+  }
+
+  handleSubmit = () => {
+    this.props.createCharacter(this.state.newChar)
+    this.setState({ submitted: true })
   }
 
   render() {
@@ -48,6 +55,8 @@ class SmashNew extends Component {
               type="text"
               placeholder="Enter character age"
               name="age"
+              onChange={this.handleChange}
+              value={this.state.newCharacter.age}
             />
           </FormGroup>
           <FormGroup>
@@ -56,6 +65,8 @@ class SmashNew extends Component {
               type="text"
               placeholder="Enter character enjoyment"
               name="enjoys"
+              onChange={this.handleChange}
+              value={this.state.newCharacter.enjoys}
             />
           </FormGroup>
           <FormGroup>
@@ -64,6 +75,8 @@ class SmashNew extends Component {
               type="text"
               placeholder="Enter character image"
               name="image"
+              onChange={this.handleChange}
+              value={this.state.newCharacter.image}
             />
           </FormGroup>
         </Form>
@@ -73,6 +86,8 @@ class SmashNew extends Component {
         >
           Create a New Character
         </Button>
+
+        {this.state.submitted && <Redirect to="/smashindex" />}
       </>
     )
   }

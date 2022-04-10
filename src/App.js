@@ -21,6 +21,10 @@ class App extends Component {
     }
   }
 
+  createCharacter = (char) => {
+    console.log(char)
+  }
+
   render() {
     return (
       <>
@@ -34,7 +38,7 @@ class App extends Component {
               let character = this.state.characters.find(character => character.id === +id)
               return <SmashShow character={character} />
             }} />
-            <Route path="/SmashNew" component={SmashNew} />
+            <Route path="/SmashNew" render={(props) => <SmashNew createCharacter={this.createCharacter} />} />
             <Route path="/SmashEdit" component={SmashEdit} />
             <Route component={NotFound} />
           </Switch>

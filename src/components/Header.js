@@ -17,14 +17,10 @@ class Header extends Component {
   constructor(props) {
     super(props)
     this.toggle = this.toggle.bind(this);
-    this.state = {
-      isOpen: false
-    }
+    this.state = { isOpen: false }
   }
   toggle() {
-    this.setState({
-      isOpen: !this.state.isOpen
-    })
+    this.setState({ isOpen: !this.state.isOpen })
   }
 
   render() {
@@ -44,7 +40,7 @@ class Header extends Component {
             </div>
           </div>
         </div>
-        {/*================= NAVBAR START =================*/}
+        {/*---------------- NAVBAR START ----------------*/}
         <div>
           <Navbar light expand="md">
             <NavbarBrand>
@@ -59,16 +55,10 @@ class Header extends Component {
                   <NavLink href="/" active>Home</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/" active>Index</NavLink>
+                  <NavLink href="/smashindex" active>View All Characters</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/" active>Blank</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="/" active>Blank</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="/components/" active>Edit</NavLink>
+                  <NavLink href="/smashnew" active>Create New Character</NavLink>
                 </NavItem>
               </Nav>
             </Collapse>
