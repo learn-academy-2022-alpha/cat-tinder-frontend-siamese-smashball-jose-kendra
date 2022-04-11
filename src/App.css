@@ -67,7 +67,8 @@ h1 {
 
 .supersmash {
   text-align: center;
-  font-family: 'Rubik Mono One', sans-serif;
+  font-family: 'Black Ops One',
+    sans-serif;
   font-size: 55px;
 }
 
@@ -122,4 +123,38 @@ button {
   font-family: 'Rubik Mono One',
     sans-serif;
   width: 30%;
+}
+
+#newButton {
+  width: 100%;
+  border: 2px solid black;
+  color: black;
+  background-color: #65c1eb;
+}
+
+.cardIndex {
+  text-align: center;
+  margin-bottom: 50px;
+  display: inline;
+  margin: 10px 10px 10px 10px;
+  font-family: 'Rubik Mono One',
+    sans-serif;
+}
+
+.card.card-body {
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin-left: 20%;
+  margin-bottom: 50px;
+  font-family: 'Rubik Mono One',
+    sans-serif;
+}
+
+.card {
+  font-family: 'Rubik Mono One',
+    sans-serif;
+  margin-left: 20%;
+  text-align: center;
+  justify-content: center;
+  display: inline-block;
 }

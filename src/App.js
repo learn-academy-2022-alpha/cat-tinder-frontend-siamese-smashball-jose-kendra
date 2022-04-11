@@ -25,6 +25,11 @@ class App extends Component {
     console.log(char)
   }
 
+  updateCharacter = (char, id) => {
+    console.log("character:", char)
+    console.log("id", id);
+  }
+
   render() {
     return (
       <>
@@ -32,14 +37,23 @@ class App extends Component {
         <Router>
           <Switch>
             <Route exact path="/" component={Home} />
+
             <Route path="/SmashIndex" render={(props) => <SmashIndex characters={this.state.characters} />} />
+
             <Route path="/SmashShow/:id" render={(props) => {
               let id = props.match.params.id
               let character = this.state.characters.find(character => character.id === +id)
               return <SmashShow character={character} />
             }} />
+
             <Route path="/SmashNew" render={(props) => <SmashNew createCharacter={this.createCharacter} />} />
-            <Route path="/SmashEdit" component={SmashEdit} />
+
+            <Route path="/SmashEdit/:id" render={(props) => {
+              let id = props.match.params.id
+              let char = this.state.characters.find(char => char.id === +id)
+              return <SmashEdit updateCharacter={this.updateCharacter} char={char} />
+            }} />
+
             <Route component={NotFound} />
           </Switch>
         </Router>
@@ -50,3 +64,4 @@ class App extends Component {
 }
 
 export default App
+

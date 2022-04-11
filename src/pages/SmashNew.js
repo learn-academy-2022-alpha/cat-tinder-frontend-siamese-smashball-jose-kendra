@@ -1,11 +1,5 @@
 import React, { Component } from 'react'
-import {
-  Form,
-  FormGroup,
-  Input,
-  Label,
-  Button
-} from 'reactstrap'
+import { Form, FormGroup, Input, Label, Button } from 'reactstrap'
 import { Redirect } from 'react-router-dom'
 
 
@@ -30,20 +24,19 @@ class SmashNew extends Component {
   }
 
   handleSubmit = () => {
-    this.props.createCharacter(this.state.newChar)
+    this.props.createCharacter(this.state.newCharacter)
     this.setState({ submitted: true })
   }
 
   render() {
     return (
       <>
-        <h1>Smash New</h1>
+        <h1>Create a new character</h1><br />
         <Form>
           <FormGroup>
             <Label for="name">Name</Label>
             <Input
               type="text"
-              placeholder="Enter character name"
               name="name"
               onChange={this.handleChange}
               value={this.state.newCharacter.name}
@@ -53,7 +46,6 @@ class SmashNew extends Component {
             <Label for="name">Age</Label>
             <Input
               type="text"
-              placeholder="Enter character age"
               name="age"
               onChange={this.handleChange}
               value={this.state.newCharacter.age}
@@ -63,30 +55,28 @@ class SmashNew extends Component {
             <Label for="name">Enjoys</Label>
             <Input
               type="text"
-              placeholder="Enter character enjoyment"
               name="enjoys"
               onChange={this.handleChange}
               value={this.state.newCharacter.enjoys}
             />
           </FormGroup>
           <FormGroup>
-            <Label for="name">Image</Label>
+            <Label for="name">Image URL</Label>
             <Input
               type="text"
-              placeholder="Enter character image"
               name="image"
               onChange={this.handleChange}
               value={this.state.newCharacter.image}
             />
           </FormGroup>
+          <FormGroup>
+            <Button id="newButton"
+              onClick={this.handleSubmit}
+            >
+              Create a New Character
+            </Button>
+          </FormGroup>
         </Form>
-        <Button
-          name="submit"
-          onClick={this.handleSubmit}
-        >
-          Create a New Character
-        </Button>
-
         {this.state.submitted && <Redirect to="/smashindex" />}
       </>
     )
@@ -94,3 +84,4 @@ class SmashNew extends Component {
 }
 
 export default SmashNew
+
