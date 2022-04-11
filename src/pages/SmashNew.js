@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Form, FormGroup, Input, Label, Button } from 'reactstrap'
 import { Redirect } from 'react-router-dom'
 
-
 class SmashNew extends Component {
   constructor(props) {
     super(props)

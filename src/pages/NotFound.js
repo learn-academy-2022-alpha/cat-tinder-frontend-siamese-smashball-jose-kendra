@@ -10,7 +10,7 @@ class NotFound extends Component {
   render() {
     return (
       <>
-        <div class="notfound"><p>Page Not Found</p>
+        <div className="notfound"><p>Page Not Found</p>
           <div>
             <img src={questionbox} id="box" alt="notfound" height="350px" width="450px" />
           </div>

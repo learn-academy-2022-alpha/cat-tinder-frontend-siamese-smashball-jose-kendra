@@ -11,14 +11,19 @@ class SmashShow extends Component {
     let { character } = this.props
     return (
       <>
-        <h1>{character.name}</h1>
-        <Col sm="6">
-          <Card body>
+        <h1>{character.name[0].toUpperCase()}{character.name.slice(1)}</h1>
+        <Col sm="5" className="banana">
+          <Card body >
             <CardTitle>Hi, my name is {character.name}!</CardTitle>
-            <img src={this.props.character.image} alt="char" width="250px" height="250px" />
-            <CardText>I am {character.age} years old. I enjoy {character.enjoys}.</CardText>
+            <img src={this.props.character.image} alt="char" className="image" width="250px" height="250px" />
+            <CardText>I am {character.age} years old.
+              I enjoy {character.enjoys}.</CardText>
             <NavLink to={`/smashedit/${character.id}`}>
               <Button id="newButton">Edit Character Profile</Button>
+            </NavLink>
+            <br />
+            <NavLink to={`/smashindex/${character.id}`}>
+              <Button id="newButton">Delete Character Profile</Button>
             </NavLink>
           </Card>
         </Col>

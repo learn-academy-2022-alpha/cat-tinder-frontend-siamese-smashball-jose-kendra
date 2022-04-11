@@ -26,16 +26,16 @@ class Header extends Component {
   render() {
     return (
       <>
-        <div class="header">
-          <div class="bomblogo">
+        <div className="header">
+          <div className="bomblogo">
             <img src={bomb} />
           </div>
-          <div class="bomblogo2">
+          <div className="bomblogo2">
             <img src={bomb} />
           </div>
-          <div class="smashlogo">
+          <div className="smashlogo">
             <img src={smashlogo} height="auto" width="auto" />
-            <div class="star">
+            <div className="star">
               <img src={star} />
             </div>
           </div>
@@ -44,7 +44,7 @@ class Header extends Component {
         <div>
           <Navbar light expand="md">
             <NavbarBrand>
-              <div class="navbarlogo">
+              <div className="navbarlogo">
                 <img src={mush} height="50px" href="/" />
               </div>
             </NavbarBrand>

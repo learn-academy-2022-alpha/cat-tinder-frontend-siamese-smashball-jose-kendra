@@ -7,9 +7,8 @@ class Home extends Component {
   render() {
     return (
       <>
-        <p class="supersmash">Super Smash Tinder App</p>
-        <p>Home</p>
-        <img id="homeimage" src="" />
+        <p className="supersmash">Super Smash Tinder App</p>
+        <img className="smashimage" src="https://www.dexerto.com/wp-content/uploads/2021/12/20/smash-ultimate-special-edition-leaked-gameplay-nintendo-insider.jpg" width="750px" align="middle" />
       </>
     )
   }

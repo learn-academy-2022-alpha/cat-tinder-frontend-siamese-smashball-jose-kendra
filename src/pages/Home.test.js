@@ -22,7 +22,7 @@ describe("When Home renders", () => {
 
   it("displays some text", () => {
     const paragraphs = home.find("p")
-    expect(paragraphs.length).toEqual(2)
+    expect(paragraphs.length).toEqual(1)
   })
 
 })

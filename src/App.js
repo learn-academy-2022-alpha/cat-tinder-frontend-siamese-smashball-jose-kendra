@@ -17,17 +17,59 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      characters: smashCharacters
+      characters: []
     }
   }
 
-  createCharacter = (char) => {
-    console.log(char)
+  componentDidMount() {
+    this.readCharacter()
   }
 
+  readCharacter = () => {
+    fetch("http://localhost:3000/characters")
+      .then(response => response.json())
+      .then(payload => this.setState({ characters: payload }))
+      .catch(errors => console.log("Character read errors:", errors))
+  }
+
+  createCharacter = (char) => {
+    fetch("http://localhost:3000/characters", {
+      body: JSON.stringify(char),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "POST"
+    })
+      .then(response => response.json())
+      .then(payload => this.readCharacter())
+      .catch(errors => console.log("Character create errors:", errors))
+  }
+
+
   updateCharacter = (char, id) => {
-    console.log("character:", char)
-    console.log("id", id);
+    fetch(`http://localhost:3000/characters/${id}`, {
+      body: JSON.stringify(char),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "PATCH"
+    })
+      .then(response => response.json())
+      .then(payload => this.readCharacter())
+      .catch(errors => console.log("Character update errors:", errors))
+  }
+
+  deleteCharacter = (id) => {
+    console.log("random string");
+    fetch(`http://localhost:3000/characters/${id}`, {
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "DELETE"
+    })
+      .then(response => response.json())
+      .then(payload => this.readCharacter())
+      .catch(errors => console.log("delete errors:", errors))
   }
 
   render() {
@@ -43,7 +85,7 @@ class App extends Component {
             <Route path="/SmashShow/:id" render={(props) => {
               let id = props.match.params.id
               let character = this.state.characters.find(character => character.id === +id)
-              return <SmashShow character={character} />
+              return <SmashShow character={character} deleteCharacter={this.deleteCharacter} />
             }} />
 
             <Route path="/SmashNew" render={(props) => <SmashNew createCharacter={this.createCharacter} />} />
