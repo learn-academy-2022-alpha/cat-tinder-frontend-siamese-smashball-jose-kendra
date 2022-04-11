@@ -16,6 +16,11 @@ class SmashEdit extends Component {
     }
   }
 
+  componentDidMount() {
+    const { id, ...rest } = this.props.char
+    this.setState({ newCharacter: rest })
+  }
+
   handleChange = (e) => {
     let { newCharacter } = this.state
     newCharacter[e.target.name] = e.target.value
@@ -23,7 +28,7 @@ class SmashEdit extends Component {
   }
 
   handleSubmit = () => {
-    this.props.updateCharacter(this.state.newChar, this.props.char.id)
+    this.props.updateCharacter(this.state.newCharacter, this.props.char.id)
     this.setState({ submitted: true })
   }
 
@@ -36,6 +41,7 @@ class SmashEdit extends Component {
             <Label for="name">Name</Label>
             <Input
               name="name"
+              text="text"
               onChange={this.handleChange}
               value={this.state.newCharacter.name}
             />
@@ -44,6 +50,7 @@ class SmashEdit extends Component {
             <Label for="age">Age</Label>
             <Input
               name="age"
+              text="text"
               onChange={this.handleChange}
               value={this.state.newCharacter.age}
             />
@@ -52,6 +59,7 @@ class SmashEdit extends Component {
             <Label for="enjoys">Enjoys</Label>
             <Input
               name="enjoys"
+              text="text"
               onChange={this.handleChange}
               value={this.state.newCharacter.enjoys}
             />
@@ -60,6 +68,7 @@ class SmashEdit extends Component {
             <Label for="image">Image URL</Label>
             <Input
               name="image"
+              text="url"
               onChange={this.handleChange}
               value={this.state.newCharacter.image}
             />
@@ -71,8 +80,8 @@ class SmashEdit extends Component {
           >
             Update Character Profile
           </Button>
+          {this.state.submitted && <Redirect to={`/smashshow/${this.props.char.id}`} />}
         </Form>
-        {this.state.submitted && <Redirect to={`/smashshow/${this.props.char.id}`} />}
       </>
     )
   }

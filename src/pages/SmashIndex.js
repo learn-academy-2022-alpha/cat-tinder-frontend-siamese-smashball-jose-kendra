@@ -11,7 +11,7 @@ class SmashIndex extends Component {
         <Col sm="6" className="cardIndex">
           {this.props.characters && this.props.characters.map(characters => {
             return (
-              <Card body key={characters.id}>
+              <Card body key={characters.id} >
                 <CardTitle>
                   <NavLink to={`/SmashShow/${characters.id}`} key={characters.id}>
                     {characters.name}<br />
