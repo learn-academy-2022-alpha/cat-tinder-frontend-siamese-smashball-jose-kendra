@@ -3,11 +3,7 @@ import { Card, CardTitle, Col } from 'reactstrap'
 import { NavLink } from 'react-router-dom'
 
 class SmashIndex extends Component {
-  constructor(props) {
-    super(props)
-  }
   render() {
-    let { characters } = this.props
     return (
       <>
         <h1>Choose your character</h1>
