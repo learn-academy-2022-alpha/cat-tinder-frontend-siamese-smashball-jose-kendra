@@ -10,6 +10,6 @@ describe("When SmashShow renders", () => {
     it("checks for header", () => {
         const smashShow = shallow(<SmashShow character={smashCharacters[0]} />)
         const heading = smashShow.find('h1')
-        expect(heading.text()).toEqual('Smash Show')
+        expect(heading.length).toEqual(1)
     })
 })

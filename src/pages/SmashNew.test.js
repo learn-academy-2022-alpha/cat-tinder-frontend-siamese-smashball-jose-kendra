@@ -15,7 +15,7 @@ describe("When SmashNew renders", () => {
     })
     it("displays a heading", () => {
         const heading = newChar.find('h1')
-        expect(heading.text()).toEqual('Smash New')
+        expect(heading.text()).toEqual('Create a new character')
     })
     it("displays a new form", () => {
         const form = newChar.find('Form')
